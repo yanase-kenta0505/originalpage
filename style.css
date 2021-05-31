@@ -6,6 +6,8 @@ body header {
   width: 100%;
   height: 100px;
   background-color: #196161;
+  position: fixed;
+  top: 0;
 }
 
 body header h1 {
@@ -20,6 +22,7 @@ body main {
   height: 500px;
   padding-top: 100px;
   margin: 0 auto;
+  margin-top: 100px;
   background-color: #bbe6c8;
   text-align: left;
   display: -webkit-box;
@@ -62,5 +65,231 @@ body main ul li a {
 
 body main ul li a:hover {
   opacity: 0.8;
+}
+
+body .gourmet-container {
+  width: 100%;
+  height: 500px;
+  background-color: #cdd4cd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .gourmet-container .gourmet-img {
+  width: 650px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .gourmet-container .gourmet-img .nextBtn {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #5757d4;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 150px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .gourmet-container .gourmet-img .nextBtn:hover {
+  opacity: 0.7;
+}
+
+body .gourmet-container .gourmet-img .imagePlace {
+  width: 80%;
+  height: 300px;
+  margin-left: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body .gourmet-container .gourmet-img .imagePlace.mentaiko {
+  background-image: url(img/mentaiko.jpg);
+}
+
+body .gourmet-container .gourmet-img .imagePlace.motu {
+  background-image: url(img/motu.png);
+}
+
+body .gourmet-container .gourment-text1 {
+  width: 40%;
+}
+
+body .gourmet-container .gourment-text1.disapper {
+  display: none;
+}
+
+body .gourmet-container .gourment-text1 h1 {
+  text-align: left;
+  font-size: 35px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+body .gourmet-container .gourment-text1 p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+body .gourmet-container .gourment-text2 {
+  width: 40%;
+}
+
+body .gourmet-container .gourment-text2.disapper {
+  display: none;
+}
+
+body .gourmet-container .gourment-text2 h1 {
+  text-align: left;
+  font-size: 35px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+body .gourmet-container .gourment-text2 p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+body .comic {
+  width: 100%;
+  height: 600px;
+  background-color: #5a7a7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .comic ul {
+  width: calc(100% - 100px)/3;
+  height: 400px;
+}
+
+body .comic ul li {
+  width: 50%;
+  margin: 0 auto;
+}
+
+body .comic ul li h2 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+body .comic ul li img {
+  width: 100%;
+  height: 295px;
+}
+
+body .comic ul li p {
+  width: 100%;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+body .keishi {
+  width: 100%;
+  height: 700px;
+  background-color: #dbb8bb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 100px;
+}
+
+body .keishi h1 {
+  font-size: 40px;
+  color: #dd4e66;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+body .keishi .imagesBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+body .keishi .imagesBox ul {
+  width: 1250px;
+  height: auto;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: loop-slide 20s linear 0s infinite normal;
+          animation: loop-slide 20s linear 0s infinite normal;
+}
+
+body .keishi .imagesBox ul li {
+  width: 250px;
+  height: 250px;
+}
+
+body .keishi .imagesBox ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+body .keishi p {
+  width: 500px;
+  font-size: 25px;
+  color: brown;
+  margin-top: 50px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+body .keishi p:hover {
+  opacity: 0.6;
+}
+
+@-webkit-keyframes loop-slide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes loop-slide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

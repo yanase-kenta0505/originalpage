@@ -1,52 +1,218 @@
-body{
+body {
   width: 100%;
-  
-  & header{
+
+  & header {
     width: 100%;
     height: 100px;
     background-color: rgb(25, 97, 97);
-    & h1{
+    position: fixed;
+    top: 0;
+    & h1 {
       color: #fff;
       font-size: 20px;
       font-weight: bold;
       padding: 40px 20px;
     }
   }
-  & main{
+  & main {
     width: 100%;
     height: 500px;
     padding-top: 100px;
     margin: 0 auto;
+    margin-top: 100px;
     background-color: rgb(187, 230, 200);
     text-align: left;
     display: flex;
     justify-content: center;
-    & .mainImg{
+    & .mainImg {
       width: 30%;
       box-sizing: border-box;
       text-align: right;
-      & img{
+      & img {
         width: 300px;
         border-radius: 50%;
       }
     }
-    & ul{
+    & ul {
       width: 60%;
       margin-left: 40px;
       margin-top: 20px;
-      & li{
+      & li {
         font-size: 30px;
         color: rgb(92, 88, 88);
         margin: 20px;
-        & a{
+        & a {
           color: rgb(108, 122, 206);
           display: inline-block;
           margin-right: 20px;
-          &:hover{
+          &:hover {
             opacity: 0.8;
           }
         }
       }
     }
+  }
+  & .gourmet-container {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(205, 212, 205);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .gourmet-img {
+      width: 650px;
+      height: auto;
+      display: flex;
+      & .nextBtn {
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        font-size: 20px;
+        background-color: rgb(87, 87, 212);
+        font-weight: bold;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        margin-top: 150px;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      & .imagePlace {
+        width: 80%;
+        height: 300px;
+        margin-left: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &.mentaiko {
+          background-image: url(img/mentaiko.jpg);
+        }
+        &.motu {
+          background-image: url(img/motu.png);
+        }
+      }
+    }
+    & .gourment-text1 {
+      width: 40%;
+      &.disapper {
+        display: none;
+      }
+      & h1 {
+        text-align: left;
+        font-size: 35px;
+        margin-bottom: 50px;
+        font-weight: bold;
+      }
+      & p {
+        font-size: 20px;
+        line-height: 1.8;
+      }
+    }
+    & .gourment-text2 {
+      width: 40%;
+      &.disapper {
+        display: none;
+      }
+      & h1 {
+        text-align: left;
+        font-size: 35px;
+        margin-bottom: 50px;
+        font-weight: bold;
+      }
+      & p {
+        font-size: 20px;
+        line-height: 1.8;
+      }
+    }
+  }
+  & .comic {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(90, 122, 122);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    & ul {
+      width: calc(100% - 100px) / 3;
+      height: 400px;
+      & li {
+        width: 50%;
+        margin: 0 auto;
+        & h2 {
+          color: #fff;
+          font-size: 30px;
+          text-align: center;
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+        & img {
+          width: 100%;
+          height: 295px;
+        }
+        & p {
+          width: 100%;
+          font-size: 15px;
+          color: #fff;
+          margin-top: 20px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  & .keishi {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(219, 184, 187);
+    box-sizing: border-box;
+    padding-top: 100px;
+    & h1 {
+      font-size: 40px;
+      color: rgb(221, 78, 102);
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    & .imagesBox {
+      display: flex;
+      overflow: hidden;
+      & ul {
+        width: 1250px;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        animation: loop-slide 20s linear 0s infinite normal;
+        & li {
+          width: 250px;
+          height: 250px;
+          & img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    & p {
+      width: 500px;
+      font-size: 25px;
+      color: brown;
+      margin-top: 50px;
+      margin-left: auto;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
