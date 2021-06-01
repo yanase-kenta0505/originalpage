@@ -5,9 +5,7 @@ body {
     width: 100%;
     height: 100px;
     background-color: rgb(25, 97, 97);
-    position: fixed;
-    top: 0;
-    z-index: 100;
+    
     & h1 {
       color: #fff;
       font-size: 20px;
@@ -20,7 +18,6 @@ body {
     height: 500px;
     padding-top: 100px;
     margin: 0 auto;
-    margin-top: 100px;
     background-color: rgb(187, 230, 200);
     text-align: left;
     display: flex;
@@ -140,7 +137,7 @@ body {
       width: calc(100% - 100px) / 3;
       height: 400px;
       & li {
-        width: 50%;
+        width:200px;
         margin: 0 auto;
         & h2 {
           color: #fff;
@@ -172,154 +169,35 @@ body {
       text-align: center;
       color: aliceblue;
       padding-top: 40px;
+      margin-bottom: 30px;
     }
-    & .movie-conainer {
-      width: 70%;
-      height: 300px;
-      margin: 0 auto;
-      margin-top: 40px;
-      position: relative;
-      & div{
-        position: absolute;
-        &:nth-of-type(1){
-          top: 40px;
-          left: 50px;
+    & .moviecontainer{
+      width: 100%;
+      height: auto;
+      & ul{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        opacity: 0;
+        &:hover{
+          animation: fluffy 4s linear 0s  forwards ;
         }
-        &:nth-of-type(2){
-          top: 60px;
-          left: 400px;
-        }
-        &:nth-of-type(3){
-          top:60px;
-          left:150px;
-        }
-        &:nth-of-type(4){
-          top: 100px;
-          left: 350px;
-        }
-      }
-      
-      & .kisaragi {
-        width: 200px;
-        height: 50px;
-        position: relative;
-        &::before {
-          content: '『';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-        &::after {
-          content: '』';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-        }
-        & p {
-          font-size: 30px;
-          &:nth-of-type(1) {
-            text-align: center;
-            font-weight: bold;
-            color: #fff;
-            line-height: 50px;
+        & li{
+          width: 300px;
+          margin-left: 80px;
+          &:nth-of-type(3) img{
+            width: 300px;
           }
-        }
-      }
-      & .romansu {
-        width: 400px;
-        height: 50px;
-        position: relative;
-        &::before {
-          content: '『';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-        &::after {
-          content: '』';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-        }
-        & p {
-          font-size: 30px;
-          &:nth-of-type(1) {
-            text-align: center;
-            font-weight: bold;
-            color: #fff;
-            line-height: 50px;
-          }
-        }
-      }
-      & .kiminonaha {
-        width: 200px;
-        height: 50px;
-        position: relative;
-        &::before {
-          content: '『';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-        &::after {
-          content: '』';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-        }
-        & p {
-          font-size: 30px;
-          &:nth-of-type(1) {
-            text-align: center;
-            font-weight: bold;
-            color: #fff;
-            line-height: 50px;
-          }
-        }
-      }
-      & .kimetu {
-        width: 200px;
-        height: 50px;
-        position: relative;
-        &::before {
-          content: '『';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-        &::after {
-          content: '』';
-          font-size: 30px;
-          color: #fff;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-        }
-        & p {
-          font-size: 30px;
-          &:nth-of-type(1) {
-            text-align: center;
-            font-weight: bold;
-            color: #fff;
-            line-height: 50px;
+          & img{
+            width: 200px;
+            // opacity: 0;
+            
           }
         }
       }
     }
+   
   }
   & .keishi {
     width: 100%;
@@ -374,4 +252,14 @@ body {
   to {
     transform: translateX(-100%);
   }
+}
+
+@keyframes fluffy  {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
 }
