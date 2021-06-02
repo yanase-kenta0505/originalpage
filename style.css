@@ -6,6 +6,15 @@ body header {
   width: 100%;
   height: 100px;
   background-color: #196161;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body header h1 {
@@ -13,6 +22,18 @@ body header h1 {
   font-size: 20px;
   font-weight: bold;
   padding: 40px 20px;
+}
+
+body header p {
+  font-size: 25px;
+  color: #fff;
+  margin-right: 60px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body header p:hover {
+  opacity: 0.7;
 }
 
 body main {
@@ -68,18 +89,29 @@ body .gourmet-container {
   width: 100%;
   height: 500px;
   background-color: #cdd4cd;
+}
+
+body .gourmet-container > h1 {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 50px;
+  text-align: center;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+body .gourmet-container .gourmet-box {
+  width: 100%;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-body .gourmet-container .gourmet-img {
+body .gourmet-container .gourmet-box .gourmet-img {
   width: 650px;
   height: auto;
   display: -webkit-box;
@@ -87,7 +119,7 @@ body .gourmet-container .gourmet-img {
   display: flex;
 }
 
-body .gourmet-container .gourmet-img .nextBtn {
+body .gourmet-container .gourmet-box .gourmet-img .nextBtn {
   width: 30px;
   height: 30px;
   color: #fff;
@@ -105,11 +137,11 @@ body .gourmet-container .gourmet-img .nextBtn {
           user-select: none;
 }
 
-body .gourmet-container .gourmet-img .nextBtn:hover {
+body .gourmet-container .gourmet-box .gourmet-img .nextBtn:hover {
   opacity: 0.7;
 }
 
-body .gourmet-container .gourmet-img .imagePlace {
+body .gourmet-container .gourmet-box .gourmet-img .imagePlace {
   width: 80%;
   height: 300px;
   margin-left: 20px;
@@ -118,11 +150,11 @@ body .gourmet-container .gourmet-img .imagePlace {
   background-position: center;
 }
 
-body .gourmet-container .gourmet-img .imagePlace.mentaiko {
+body .gourmet-container .gourmet-box .gourmet-img .imagePlace.mentaiko {
   background-image: url(img/mentaiko.jpg);
 }
 
-body .gourmet-container .gourmet-img .imagePlace.motu {
+body .gourmet-container .gourmet-box .gourmet-img .imagePlace.motu {
   background-image: url(img/motu.png);
 }
 
@@ -134,7 +166,7 @@ body .gourmet-container .gourment-text1.disapper {
   display: none;
 }
 
-body .gourmet-container .gourment-text1 h1 {
+body .gourmet-container .gourment-text1 h2 {
   text-align: left;
   font-size: 35px;
   margin-bottom: 50px;
@@ -154,7 +186,7 @@ body .gourmet-container .gourment-text2.disapper {
   display: none;
 }
 
-body .gourmet-container .gourment-text2 h1 {
+body .gourmet-container .gourment-text2 h2 {
   text-align: left;
   font-size: 35px;
   margin-bottom: 50px;
@@ -168,8 +200,20 @@ body .gourmet-container .gourment-text2 p {
 
 body .comic {
   width: 100%;
-  height: 600px;
+  height: 800px;
   background-color: #5a7a7a;
+}
+
+body .comic h1 {
+  margin-bottom: 50px;
+  padding-top: 80px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+body .comic .comics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,17 +224,17 @@ body .comic {
       justify-content: space-around;
 }
 
-body .comic ul {
+body .comic .comics ul {
   width: calc(100% - 100px)/3;
   height: 400px;
 }
 
-body .comic ul li {
+body .comic .comics ul li {
   width: 200px;
   margin: 0 auto;
 }
 
-body .comic ul li h2 {
+body .comic .comics ul li h2 {
   color: #fff;
   font-size: 30px;
   text-align: center;
@@ -198,12 +242,12 @@ body .comic ul li h2 {
   font-weight: bold;
 }
 
-body .comic ul li img {
+body .comic .comics ul li img {
   width: 100%;
   height: 295px;
 }
 
-body .comic ul li p {
+body .comic .comics ul li p {
   width: 100%;
   font-size: 15px;
   color: #fff;
@@ -243,8 +287,8 @@ body .movie .moviecontainer ul {
 }
 
 body .movie .moviecontainer ul:hover {
-  -webkit-animation: fluffy 4s linear 0s  forwards;
-          animation: fluffy 4s linear 0s  forwards;
+  -webkit-animation: fluffy 2s linear 0s forwards;
+          animation: fluffy 2s linear 0s forwards;
 }
 
 body .movie .moviecontainer ul li {
@@ -315,6 +359,78 @@ body .keishi p {
 
 body .keishi p:hover {
   opacity: 0.6;
+}
+
+body .contact {
+  width: 100%;
+  height: auto;
+  background-color: antiquewhite;
+}
+
+body .contact h1 {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 100px;
+  font-size: 35px;
+  font-weight: bold;
+  color: brown;
+}
+
+body .contact table {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 40px 60px;
+  margin-top: -50px;
+}
+
+body .contact table tr:nth-of-type(4) td {
+  border: none;
+  text-align: center;
+}
+
+body .contact table tr:nth-of-type(4) td input {
+  width: 100px;
+  height: 50px;
+  background-color: brown;
+  color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 5px 5px 0 #881212;
+          box-shadow: 5px 5px 0 #881212;
+}
+
+body .contact table tr:nth-of-type(4) td input:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+body .contact table th {
+  width: 20%;
+  height: 30px;
+  line-height: 20px;
+  padding-left: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: brown;
+}
+
+body .contact table td {
+  border-bottom: 3px solid brown;
+  margin-right: 10px;
+  text-align: left;
+}
+
+body .contact table td input {
+  width: 100%;
+  height: 100%;
+  color: brown;
+}
+
+body .contact table td textarea {
+  width: 100%;
 }
 
 @-webkit-keyframes loop-slide {
