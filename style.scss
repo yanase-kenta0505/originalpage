@@ -16,17 +16,16 @@ body {
       padding: 40px 20px;
     }
 
-    & p{
+    & p {
       font-size: 25px;
       color: #fff;
       margin-right: 60px;
       font-weight: bold;
       cursor: pointer;
-      &:hover{
+      &:hover {
         opacity: 0.7;
       }
     }
-
   }
   & main {
     width: 100%;
@@ -54,6 +53,8 @@ body {
         font-size: 30px;
         color: rgb(92, 88, 88);
         margin: 20px;
+        &:nth-of-type(4){
+        }
         & a {
           color: rgb(108, 122, 206);
           display: inline-block;
@@ -109,6 +110,7 @@ body {
           width: 80%;
           height: 300px;
           margin-left: 20px;
+          
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -170,9 +172,12 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-around;
+      flex-wrap: wrap;
       & ul {
         width: calc(100% - 100px) / 3;
         height: 400px;
+        margin-bottom: 100px;
+        padding: 20px;
         & li {
           width: 200px;
           margin: 0 auto;
@@ -217,9 +222,9 @@ body {
         display: flex;
         justify-content: center;
         margin: 0 auto;
-        opacity: 0;
+        // opacity: 0;
         &:hover {
-          animation: fluffy 2s linear 0s forwards;
+          // animation: fluffy 2s linear 0s forwards;
         }
         & li {
           width: 300px;
@@ -299,17 +304,17 @@ body {
       border-spacing: 40px 60px;
       margin-top: -50px;
 
-      & tr:nth-of-type(4) td{
+      & tr:nth-of-type(4) td {
         border: none;
         text-align: center;
-        & input{
+        & input {
           width: 100px;
           height: 50px;
           background-color: brown;
           color: #fff;
           border-radius: 8px;
           box-shadow: 5px 5px 0 rgb(136, 18, 18);
-          &:active{
+          &:active {
             box-shadow: none;
             margin-top: 5px;
             margin-left: 5px;
@@ -329,19 +334,17 @@ body {
         border-bottom: 3px solid brown;
         margin-right: 10px;
         text-align: left;
-        
+        min-width: 230px;
 
         & input {
           width: 100%;
           height: 100%;
           color: brown;
-
         }
         & textarea {
           width: 100%;
         }
       }
-      
     }
   }
 }
@@ -361,5 +364,130 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  body main {
+    height: auto;
+    flex-direction: column;
+    padding-top: 40px;
+    & .mainImg {
+      width: 100%;
+      text-align: center;
+    }
+    & ul {
+      margin-left: 40px;
+      width: 80%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  body .gourmet-container {
+    height: 700px;
+  }
+  body .gourmet-container > h1 {
+    margin-bottom: 150px;
+  }
+  body .gourmet-container .gourmet-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .gourmet-container .gourmet-box .gourmet-img {
+    margin-bottom: 40px;
+    width: 80%;
+  }
+  body .gourmet-container .gourment-text1 {
+    width: 80%;
+  }
+  // body .gourmet-container .gourment-text1 h2{
+  //   text-align: center;
+  // }
+  body .gourmet-container .gourment-text2 {
+    width: 80%;
+    text-align: center;
+  }
+  body .gourmet-container .gourment-text2 p {
+    width: 80%;
+    text-align: left;
+  }
+
+  body .movie {
+    height: auto;
+  }
+  body .movie .moviecontainer ul {
+    flex-direction: column;
+  }
+  body .movie .moviecontainer ul li {
+    width: 50%;
+    margin: 20px auto;
+    & img {
+      width: 100%;
+    }
+  }
+  body .movie .moviecontainer ul li:nth-of-type(3) {
+    width: 80%;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact table {
+   
+
+    & tr:nth-of-type(1) td {
+      display: block;
+      margin-bottom: 30px;
+      width: 80%;
+    }
+
+    & tr:nth-of-type(1) th{
+      padding-top: 30px;
+    }
+   & table th{
+     padding-left: 0;
+   }
+   
+  }
+
+  body .contact table{
+    border-spacing: 10px 60px;
+  }
+
+  body .gourmet-container .gourmet-box .gourmet-img .imagePlace.motu{
+   margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  body .comic {
+    height: 1200px;
+  }
+  .contact textarea{
+    height: 250px;
+    border: 3px solid brown;
+    border-bottom: none;
+  }
+  .contact tr:nth-of-type(3){
+    & th{
+      padding-top: 100px;
+    }
+  }
+
+}
+
+@media screen and (max-width:570px){
+  .keishi{
+    text-align: center;
+
+  }
+  .keishi a{
+    font-size: 20px;
+  }
+  body header p{
+    color: rgb(221, 38, 69);
   }
 }

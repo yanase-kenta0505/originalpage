@@ -222,11 +222,15 @@ body .comic .comics {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body .comic .comics ul {
   width: calc(100% - 100px)/3;
   height: 400px;
+  margin-bottom: 100px;
+  padding: 20px;
 }
 
 body .comic .comics ul li {
@@ -283,12 +287,6 @@ body .movie .moviecontainer ul {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  opacity: 0;
-}
-
-body .movie .moviecontainer ul:hover {
-  -webkit-animation: fluffy 2s linear 0s forwards;
-          animation: fluffy 2s linear 0s forwards;
 }
 
 body .movie .moviecontainer ul li {
@@ -421,6 +419,7 @@ body .contact table td {
   border-bottom: 3px solid brown;
   margin-right: 10px;
   text-align: left;
+  min-width: 230px;
 }
 
 body .contact table td input {
@@ -470,6 +469,127 @@ body .contact table td textarea {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  body main {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 40px;
+  }
+  body main .mainImg {
+    width: 100%;
+    text-align: center;
+  }
+  body main ul {
+    margin-left: 40px;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  body .gourmet-container {
+    height: 700px;
+  }
+  body .gourmet-container > h1 {
+    margin-bottom: 150px;
+  }
+  body .gourmet-container .gourmet-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .gourmet-container .gourmet-box .gourmet-img {
+    margin-bottom: 40px;
+    width: 80%;
+  }
+  body .gourmet-container .gourment-text1 {
+    width: 80%;
+  }
+  body .gourmet-container .gourment-text2 {
+    width: 80%;
+    text-align: center;
+  }
+  body .gourmet-container .gourment-text2 p {
+    width: 80%;
+    text-align: left;
+  }
+  body .movie {
+    height: auto;
+  }
+  body .movie .moviecontainer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .movie .moviecontainer ul li {
+    width: 50%;
+    margin: 20px auto;
+  }
+  body .movie .moviecontainer ul li img {
+    width: 100%;
+  }
+  body .movie .moviecontainer ul li:nth-of-type(3) {
+    width: 80%;
+  }
+  body .movie .moviecontainer ul li:nth-of-type(3) img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact table tr:nth-of-type(1) td {
+    display: block;
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  .contact table tr:nth-of-type(1) th {
+    padding-top: 30px;
+  }
+  .contact table table th {
+    padding-left: 0;
+  }
+  body .contact table {
+    border-spacing: 10px 60px;
+  }
+  body .gourmet-container .gourmet-box .gourmet-img .imagePlace.motu {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  body .comic {
+    height: 1200px;
+  }
+  .contact textarea {
+    height: 250px;
+    border: 3px solid brown;
+    border-bottom: none;
+  }
+  .contact tr:nth-of-type(3) th {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .keishi {
+    text-align: center;
+  }
+  .keishi a {
+    font-size: 20px;
+  }
+  body header p {
+    color: #dd2645;
   }
 }
 /*# sourceMappingURL=style.css.map */
